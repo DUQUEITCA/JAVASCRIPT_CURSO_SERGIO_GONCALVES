@@ -1,0 +1,178 @@
+FRONTEND                                                            BACKEND
+
+PATRÓN DE DISEÑO MVC: Modelo, Vista, Controlador
+
+        para la transmisión
+        de datos, se puede 
+        emplear GET/POST 
+
+        Viajan las variable
+        declaradas mediante 
+        el atributo name=""
+        en las etiuqtea <input>
+
+                           RED
+VISTA  <------------------> TCP/IP<------------------------> Controlador <---+
+                                                                             |
+                                                                             V
+                                                                          MODELO DE DATOS
+
+
+Nevagador Web, es capaz
+de interpretar, todas 
+las tecnologías declaradas
+abajo:
++-----------+
+|XML  |JSON |
++-----------+
+|CSS  | JS  |
++-----------+
+|   HTML    |
++-----------+
+
+HTML: Lenguaje de etiquetas (no es de programación), su finalidad 
+es dar estructura a un sitio web.
+<etiqueta1></etiqueta1>
+Por ejemplo:
+<head></head>
+<body></body>
+
+<etiqueta2>
+Por ejemplo:
+<br>
+<img>
+
+Vienen acompañadas por atributos:
+<etiqueta1 atr1="" atr2=""></etiqueta1>
+Por ejemplo:
+<head id="encabezado" class="nombre_de_clase"></head>
+
+Gracias al HTML, se define el DOM: Todas las etiquetas 
+de la aplicación Web, constituyen el modelo de OBJETOS 
+del documento.
+
+MODELO DE OBJETOS DEL DOCUMENTO
+
+                      HTML 
+                       |
+          +------------+------------+
+        HEAD                      BODY 
+         |                          |
+         meta                     h1 ... h6
+         title                    div 
+         link                     header...
+         scrip
+
+CSS: Es un lenguaje (no es de programación) de diseño, que da el 
+aspecto visual de la aplicación WEB.
+
+Formas básica de declaración:
+
+nombre_etiqueta{
+    propiedad1: valor;
+    propiedad1: valor;
+    ...
+}
+
+#identificación{
+    propiedad1: valor;
+    propiedad1: valor;
+    ...
+}
+
+.nombre_de_clase{
+    propiedad1: valor;
+    propiedad1: valor;
+    ...
+}
+
+DENTRO DE UN DOCUMENTO HTML, SE PUEDE REFERIR A LAS PROPIEDADES DE ESTILO
+DE LA SIGUIENTE FORMA:
+
+1) A través del atributo style=""
+<etiqueta1 atr1="" atr2=""></etiqueta1>
+Por ejemplo:
+<H1 id="encabezado" class="nombre_de_clase" style="color:red;"></H1>
+
+2) A través de la etiqueta <style>
+<head>
+
+    <style>
+        h1{
+            color:red;
+        }
+    <style>
+</head>
+
+3) Empleando un archivo de extesión CSS, en el cual se hacen las declaraciones
+y se accede a través de un enlace con la etiqueta:
+
+<link href="./ruta/style.css" rel="stylesheet">
+
+LENGUAJES PARA EL INTERCAMBIO DE DATOS:
+XML: EXTENDED MARK LANGUAJE, lenguaje de etiquetas para el intercambio 
+de datos. Por ejemplo:
+<estudiantes>
+    <alumno1>
+        <nombre>ANA</nombre>
+        <apellido>VASQUEZ</apellido>
+    <alumno1>
+    <alumno2>
+        <nombre>NELLY</nombre>
+        <apellido>CONTRERAS</apellido>
+    <alumno2>
+
+</estudiantes>
+
+
+JSON: JAVASCRIPT OBJECT NOTATION
+
+estudiantes{
+    alumnos1{
+        nombre:ANA;
+        apollido:VASQUEZ;
+    }
+    alumnos2{
+        nombre:NELLY;
+        apollido:CONTRERAS
+    }
+    ...
+}
+
+
+JAVASCRIPT: Es un lenguaje de programación (parecido a JAVA), interpretado
+por el navegador, también puede ser ejecutado en el servidor, gracias a la
+instalación de NODE (interprete de JAVASCRIPT del lado del servidor). Es un 
+lenguaje de tipado dinámico, no hay la declaración de tipos de datos.
+Microsoft desarrolló un lenguaje que se llama Typescript, que es un lenguaje
+fuertemente tipado, posteriormente mediante un proceso conocido como 
+transpilación lo convierte a JAVASCRIPT.
+
+
+Formas de declaración de JS en un archivo HTML:
+
+
+1) A través de los atributo on* = ""
+
+2) A través de la etiqueta <script></script>
+
+Orden de declaraciones en todo programa
+
+(i)   Librerías
+(ii)  Funciones 
+(iii) Variables
+(iv)  Cuerpo principal del programa
+
+
+
+file:///C:/Users/duque/OneDrive/Documents/Henry%20Duque/JAVASCRIPT_CURSO_SERGIO_GONCALVES/ejemplo03.html?n1=0&n2=0&n=0
+
+
+file:///C:/Users/duque/OneDrive/Documents/Henry%20Duque/JAVASCRIPT_CURSO_SERGIO_GONCALVES/ejemplo03.html?n1=2&n2=5&n=10
+
+
+
+
+
+
+

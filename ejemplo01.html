@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/ejemplo01.css">
+</head>
+<body>
+    <div id="encabezado">
+        <h1>Ejemplo01</h1>
+        <h2>Cálculo de la resolvente</h2>
+        <h2>Ecuación de 2do. Grado</h2>
+        <h3>Por favor ingrese los siguientes valores</h3>
+    </div>
+    <div id="entrada_de_datos">
+        <table>
+            <tr>
+                <td>
+                    a
+                </td>
+                <td>
+                    <input type="number" name="a" id="a" step="0.001" value="0">
+                </td>
+            </tr>
+            <tr>
+                <td>b</td>
+                <td>
+                    <input type="number" name="b" id="b" step="0.001" value="0">
+                </td>
+            </tr>
+            <tr>
+                <td>c</td>
+                <td>
+                    <input type="number" name="c" id="c" step="0.001" value="0">
+                </td>
+            </tr>
+        </table>
+        <button onclick="calcular()">Calcular</button>
+        <button onclick="limpiar()">Limpiar</button>
+    </div>
+    <div id="salida"></div>
+    <!-- 2da. Forma de declaración de código JAVASCRIPT-->
+    <script src="./js/ejemplo01.js"></script>
+</body>
+</html>
