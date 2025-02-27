@@ -1,0 +1,166 @@
+JAVASCRIPT:
+
+Lenguaje de programación, que puede ser ejecutado
+desde el navegador porque lo interpreta de forma
+nativa. 
+También puede ser ejecutado en servidor a través de
+nodejs, el cual debe ser instalado previamente.
+
+NAVEGADOR WEB
++-------------------+
+ Contiene un conjunto
+ API: 
+ Interface de programación de Aplicaciones
+ Referencia:
+ https://developer.mozilla.org/es/docs/Web/API
++-------------------+
+
+
+Por ejemplo:
+CANVAS
+
+Para dibujar
+Ejemplo05 Api Canvas
++-------+  +-------+
+ Dibujar    Limpiar
++-------+  +-------+
+
+canvas
++--------------------------+
++--+ yellow cada cuardo tendrá ancho 100px, altura de 100px
+ 1
++--+--+ blue
+     2
+   +--+--+rojo
+        3
+      +--+--+ green
+           4
+         +--+--+ orange
+              5
+            +--+--+ purple
+                 6
+               +--+
++--------------------------+
+
+
+
+contenedor = <div> o cualquier etiqueta html es una caja
++-------------------------------------------+
+ contenido        contenido        contenido
+                     
+ contenido        contenido        contenido
+
+ contenido        contenido        contenido
++-------------------------------------------+
+
+pantalla
+puede variar el ancho en unidades de pixeles
+
+Se divide la pantalla en 12 porciones
+100% / 12 = 8.33%
+
+clase que representa parte del ancho de la pantalla
+
+.col-1{width:8.33%;}
+.col-2{width:16.66%}
+.col-3{width:25%}
+.col-4{width:33.33%}
+.col-5{...}
+
+....
+
+.col-12{width:100%}
+
+
+CASO GEOLOCALIZACIÓN
+Ejemplo06 Api GEOLOCALIZACIÓN
+
+
++------------------+ +---------------+
+ OBTENER UBICACIÓN    VER EN UN MAPA (deshabilitado)
++------------------+ +---------------+
+
+Su ubicación es LATITUD: coordenada1, LONGITUD: coordenada2
+
+Una vez que se obtienen las coordenadas, el botón se habilita
+y al hacer un click, abre un mapa y muestra la ubicación
+
+
+
+¿Qué representa el . en JAVASCRIPT?
+
+Todo es un objeto, para este lenguaje.
+
+¿De qué depende un objeto?
+
+De una clase
+
+¿Qué conforma una clase?
+
+Atributos
+Métodos
+
+¿Cómo se accede a esos atributos o métodos?
+
+A través del nombre del objeto.atributo o objeto.método()
+
+Entonces el punto es una manera a través del lenguaje JS, para acceder
+al atributo o método, obtenido del objeto que está usando.
+
+
+Ejemplo07 Caso Galería
+
+     Jueves 27 de Febrero de 2025, 1:02:00 PM (cada segundo se actualiza)
+     +-----------------------------+
+
+
+           imagen principal
+                    5
+
+
+     +-----------------------------+
+
+     +-------+-------+-------+-----+
+         1      2        3     4
+     +-------+-------+-------+-----+
+
+Asignación: 
+(1) Intercambiar imagenes sin perdida al hacer click 
+sobre las imagenes inferiores.
+(2) Colocar fecha y hora del sistema, que muestre la 
+actualización cada 1 segundo de la hora del sistema.
+Esta se debe observar sobre la imagen principal
+Puntos de atención:
+- Uso de la clase Date() de JAVASCRIPT 
+    new Date(); investigar
+- Uso de los métodos: getFullYear(), getMonth(),
+getDay(), getDate(), getHour(), getMinutes(), getSeconds()
+- La hora se obtiene en formato de 24 horas (hora militar)
+cambiar para que sea hora civil 
+Si la hora es > 12 entonces restar 12 y añadir la nota PM 
+en caso contrario es AM.
+- Mostrar nombre de los meses y días de la semana en castellano.
+Estos valores son números donde caso mes 
+0: Enero
+11: Diciembre
+ 
+caso semana
+0: Domingo
+6: Sábado
+
+Sugerencia:
+Crear arreglos para nombres de meses y dias.
+
+Acerca de la actualización cada segundo, usar la función
+setInterval() : investigar
+
+
+
+
+
+
+
+
+
+
+

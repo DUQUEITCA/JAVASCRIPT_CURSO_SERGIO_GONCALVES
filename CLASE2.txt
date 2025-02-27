@@ -1,0 +1,8 @@
+Desarrollar un programa en JS, que genera la Serie Fibonacci,
+a partir de 1, para n cantidad de valores. Así mismo debe indicar si el número producido es primo o no. 
+Nota: Un número es primo si sólo es divisible entre 1 y si mismo. Por definición 1 no es primo. Por ejemplo:
+No n = 10, esta sería la serie.
+1,1,2,3,5,8,13,21,34,55,89
+
+
+10,10,20,30,50,.....
