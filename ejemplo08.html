@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap/bootstrap.min.css">
+    <script src="./bootstrap/jquery.min.js"></script>
+    <script src="./bootstrap/bootstrap.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Ejemplo08 Expresiones Regulares</h1>
+        <form action="">
+            <div class="form-group">
+                <label for="">Nombre</label>
+                <input type="text" name="nombre" id="nombre" class="form-control" onblur="valNom(this.value)">
+                <div id="msjNom"></div>
+            </div>
+            <div class="form-group">
+                <label for="">Apellido</label>
+                <input type="text" name="apellido" id="apellido" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="">Correo electrónico</label>
+                <input type="email" name="correo" id="correo" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="">Clave</label>
+                <input type="password" name="clave1" id="clave1" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="">Repetir clave</label>
+                <input type="password" name="clave2" id="clave2" class="form-control">
+            </div>
+            <div class="form-group">
+                <button class="btn btn-success" id="btnEnviar" disabled>Enviar</button>
+                <button class="btn btn-warning">Limpiar</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        // funciones
+        function valNom(argNom){
+            console.log('estoy en validar nombre');
+            let expRegNom = /^[a-záéíóúñA-ZÁÉÍÓÚÑ\s]+$/;
+            console.log(expRegNom.test(argNom));
+            if (!expRegNom.test(argNom)){
+                document.getElementById('msjNom').innerHTML = '*Error: El nombre sólo debe contener letras o espacios en blanco';
+                document.getElementById('msjNom').style.color = 'red';
+                document.getElementById('msjNom').style.fontSize = '14px';
+                ctrlNombre = true;
+            }else{
+                document.getElementById('msjNom').innerHTML = '';
+                ctrlNombre = false;
+            }
+            valControles();
+        }
+
+        function valControles(){
+            if (ctrlNombre && ctrlApellido && ctrlCorreo && ctrlClave1 && ctrlClave2){
+                document.getElementById('btnEnviar').disabled = false;
+            }else{
+                document.getElementById('btnEnviar').disabled = true;
+            }
+        }
+        // CORREO ELECTRÓNICO
+        // let expRegEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+        // CLAVE
+        // https://es.stackoverflow.com/questions/4300/expresiones-regulares-para-contrase%C3%B1a-en-base-a-una-politica
+
+        // let expRegClave = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8,15}[^'\s]/
+
+        // Variables
+        let ctrlNombre, ctrlApellido, ctrlCorreo, ctrlClave1, ctrlClave2;
+        ctrlNombre = false;
+        ctrlApellido = false;
+        ctrlCorreo = false;
+        ctrlClave1 = false;
+        ctrlClave2 = false;
+
+
+
+    </script>
+</body>
+</html>

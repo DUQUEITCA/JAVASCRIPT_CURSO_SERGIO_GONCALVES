@@ -1,0 +1,54 @@
+Un documento documento HTML, es equivalnete al DOM: 
+Modelo de Objetos del documento.
+
+<etiqueta atr1="" atr2="" ... atr=""></etiqueta>
+
+
+semana          diaSemana 0..6
+0[domingo  ]
+1[lunes    ]
+2[martes   ]
+3[miércoles]
+4[jueves   ]
+5[viernes  ]
+6[sábado   ]
+
+
+meses               mm 0.. 11
+0  [Enero     ]     
+1  [Febrero   ]
+2  [Marzo     ]
+3  [Abril     ]
+4  [Mayo      ]
+5  [Junio     ]
+6  [Julio     ]
+7  [Agosto    ]
+8  [Septiembre]
+9  [Octubre   ]
+10 [Noviembre ]
+11 [Diciembre ]
+
+
+Expresión regular
+Secuencia de código, que permite validar el contenido de una
+variable. Forma general del planteamiento es:
+
+let expRegLetras = /^[a-zA-Z]+$/;
+let prueba = 1234;
+
+console.log(expRegLetras.test(prueba));
+False
+
+
+Se definirá una interface de usuario, para el ingreso de 
+nombre, apellido, correo electrónico, clave y verificación de clave
+
+Para el caso de nombre y apellido: Sólo se admiten letras minúsculas o mayúsculas, acentos, ñÑ y espacios en blanco
+
+let expRegNomApe = /^[a-záéíóúñA-ZÁÉÍÓÚÑ\s]+$/;
+
+
+
+
+
+

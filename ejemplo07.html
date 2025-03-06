@@ -8,18 +8,71 @@
   </head>
 <body>
     <h1>Ejemplo07 - Galería</h1>
-
+    <div id="fechaHora"></div>
     <div id="principal">
-        <img id="img-principal" src="./img/1.jpeg" alt="">
+        <img id="img-principal" src="./img/principal.jpeg" alt="">
     </div>
 
     <div id="secundario">
-        <img id="img1" src="./img/1.jpeg" alt="" onclick="cambiarImagen(this.src)">
-        <img id="img2" src="./img/2.jpeg" alt="" onclick="cambiarImagen(this.src)">
-        <img id="img3" src="./img/3.jpeg" alt="" onclick="cambiarImagen(this.src)">
-        <img id="img4" src="./img/4.jpeg" alt="" onclick="cambiarImagen(this.src)">
+        <img id="img1" src="./img/1.jpeg" alt="" onclick="cambiarImagen(this)">
+        <img id="img2" src="./img/2.jpeg" alt="" onclick="cambiarImagen(this)">
+        <img id="img3" src="./img/3.jpeg" alt="" onclick="cambiarImagen(this)">
+        <img id="img4" src="./img/4.jpeg" alt="" onclick="cambiarImagen(this)">
     </div>
-
+    <!--
+            Declaración de librerías
+    -->
     <script src="./js/ejemplo07.js"></script>
+    <script>
+        // Declaración de funciones
+        const actualizarFechaHoraSistema = () =>{
+            let fechaHoraSistema = new Date();
+            //console.log(fechaHoraSistema);
+            //fechaHora.innerHTML = fechaHoraSistema;
+
+            // Se dará formato para que la fecha y hora del
+            // sistema, tenga la siguiente descripción:
+            // Jueves, 6 de Marzo de 2025 10:41:00 a.m.
+            // Y ese tiempo, se vaya actualizando cada 1 seg.
+            dd = fechaHoraSistema.getDate();
+            mm = fechaHoraSistema.getMonth();
+            aa = fechaHoraSistema.getFullYear();
+            hr = fechaHoraSistema.getHours();
+            mi = fechaHoraSistema.getMinutes();
+            se = fechaHoraSistema.getSeconds();
+            diaSemana = fechaHoraSistema.getDay();
+            //console.log(dd, mm, aa, hr, mi, se, diaSemana);  
+
+            if (mi < 10){
+                mi = '0' + mi;
+            }
+            if (se < 10){
+                se = '0' + se;
+            }
+            if (hr > 12){
+                hr = hr - 12;
+                ampm = ' p.m.';
+            }else{
+                ampm = ' a.m.';
+            }
+
+            textoFechaHora = `${semana[diaSemana]}, ${dd} de ${meses[mm]} de ${aa} ${hr}:${mi}:${se} ${ampm}`;
+
+            fechaHora.innerHTML = textoFechaHora;
+        }
+
+        // Declaración de variables
+        let fechaHora = document.getElementById('fechaHora')
+        let dd, mm, aa, hr, mi, se, ampm, diaSemana;
+        let textoFechaHora = '';
+        let meses = ['Enero','Febrero','Marzo','Abril','Mayo','Junio', 'Julio', 'Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
+        let semana = ['Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','Sábado'];
+
+        // Cuerpo principal del programa
+        // Llamado a la función, para ejecutarse inicialmente
+        actualizarFechaHoraSistema();
+        // Llamado a la función, para ejecutarse cada 1 segundo.        
+        setInterval(actualizarFechaHoraSistema,1000);
+    </script>
 </body>
 </html>
